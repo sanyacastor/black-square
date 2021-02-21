@@ -1,38 +1,90 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  background:#fff;
 }
-
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff !important;
+}
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+.sectionItem {
+  font-family: 'Source Code Pro', -apple-system, monospace;
+  color: #000;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2em;
+  border-left: 1px solid #000;
+  text-decoration: underline;
+}
+.sectionItem + .sectionItem {
+  border-top: 1px solid #000;
+}
+.square {
+  width: 3.5em;
+  height: 3.5em;
+  display: block;
+  background: #000;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  border: .5em solid #fff;
+  /* outline: 8px solid #000; */
+}
+.cursor {
+  z-index: 1;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #000;
+  /* transform: translate(-50%, -50%); */
+  /* transform-origin: 100% 100%; */
+  pointer-events: none;
+  transition: all .3s ease;
+  transition-property: background, transform, border-radius, width, height, border-width;
+  animation-name: rotate;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .footer {
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+  height: 60px;
+  border-top: 1px solid #000;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 12px;
+  padding: 0 2em;
 }
 
 .title a {
@@ -48,8 +100,7 @@
 
 .title {
   margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
@@ -111,7 +162,16 @@
 }
 
 .logo {
-  height: 1em;
+  grid-row: 1/4;
+  grid-column: 1/1;
+  padding: 0 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url('https://storage.yandexcloud.net/moskvichmag/uploads/2019/02/1162-2266.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 600px) {
