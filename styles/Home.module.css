@@ -7,7 +7,7 @@
   align-items: center;
   /* max-width: 1200px; */
   /* margin: 0 auto; */
-  background:#fff;
+  background: #fff;
 }
 .main {
   flex: 1;
@@ -15,27 +15,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 60px);
   color: #fff !important;
 }
+
+.main button {
+  background: white;
+  border-radius: 8px;
+  border: 2px solid rgb(45, 39, 70);
+  color: rgb(45, 39, 70);
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  font-size: 1.5rem;
+}
+
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   width: 100%;
   height: 100%;
 }
 .sectionItem {
-  font-family: 'Source Code Pro', -apple-system, monospace;
+  font-family: "Source Code Pro", -apple-system, monospace;
   color: #000;
   display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
+  line-height: 120%;
+  padding: 1em;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1em;
   border-left: 1px solid #000;
-  text-decoration: underline;
+  overflow: scroll;
 }
 .sectionItem + .sectionItem {
   border-top: 1px solid #000;
@@ -47,33 +61,8 @@
   background: #000;
   margin-bottom: 1.5em;
   padding: 1em;
-  border: .5em solid #fff;
+  border: 0.5em solid #fff;
   /* outline: 8px solid #000; */
-}
-.cursor {
-  z-index: 1;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border: 5px solid #000;
-  /* transform: translate(-50%, -50%); */
-  /* transform-origin: 100% 100%; */
-  pointer-events: none;
-  transition: all .3s ease;
-  transition-property: background, transform, border-radius, width, height, border-width;
-  animation-name: rotate;
-  animation-duration: 1000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes rotate {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
 }
 
 .footer {
@@ -169,14 +158,69 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: url('https://storage.yandexcloud.net/moskvichmag/uploads/2019/02/1162-2266.jpg');
+  background: url("https://storage.yandexcloud.net/moskvichmag/uploads/2019/02/1162-2266.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-@media (max-width: 600px) {
-  .grid {
+.lead {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh max-content;
     width: 100%;
-    flex-direction: column;
+    height: 100%;
+  }
+
+  .logo {
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+
+  .main {
+    overflow: auto;
+    height: auto;
   }
 }
+
+/* .container {
+    max-height: auto;
+  }
+
+  .main {
+    height: 200vh;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 60px;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+  }
+
+  .logo {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    padding: 0 4em;
+    display: flex;
+    height: 100vh;
+  }
+
+  .grid {
+    width: 100%;
+  }
+
+  .footer {
+  }
+}  */
