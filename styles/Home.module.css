@@ -153,8 +153,8 @@
 .logo {
   grid-row: 1/4;
   grid-column: 1/1;
-  padding: 0 4em;
   display: flex;
+  padding: 0 4em;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -180,6 +180,11 @@
   .logo {
     grid-row: 1/1;
     grid-column: 1/1;
+    padding: 0 1em;
+  }
+  .footer {
+    height: auto;
+    padding: 1em;
   }
 
   .main {
@@ -187,40 +192,3 @@
     height: auto;
   }
 }
-
-/* .container {
-    max-height: auto;
-  }
-
-  .main {
-    height: 200vh;
-  }
-
-  .page {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 60px;
-  }
-
-  .section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
-  }
-
-  .logo {
-    grid-row: 1/1;
-    grid-column: 1/1;
-    padding: 0 4em;
-    display: flex;
-    height: 100vh;
-  }
-
-  .grid {
-    width: 100%;
-  }
-
-  .footer {
-  }
-}  */
