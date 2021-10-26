@@ -7,7 +7,7 @@ export default function form() {
       <form className={s.form} name="demand" method="POST" data-netlify="true">
         <h2>Заполните форму:</h2>
         <label>
-          <input type="text" name="name" placeholder="Имя"></input>
+          <input type="text" name="username" placeholder="Имя"></input>
         </label>
         <label>
           <input
