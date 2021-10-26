@@ -4,7 +4,14 @@ import s from "../../styles/form.module.css";
 export default function form() {
   return (
     <div className={s.formContainer}>
-      <form className={s.form} name="demand" method="POST" data-netlify="true">
+      <form
+        className={s.form}
+        name="demand"
+        method="POST"
+        data-netlify="true"
+        action="/success"
+      >
+        <input type="hidden" name="form-name" value="demand" />
         <h2>Заполните форму:</h2>
         <label>
           <input type="text" name="username" placeholder="Имя"></input>
