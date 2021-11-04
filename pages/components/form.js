@@ -1,9 +1,10 @@
 import React from "react";
 import s from "../../styles/form.module.css";
 
-export default function form() {
+export default function form({ action }) {
   return (
     <div className={s.formContainer}>
+      <button onClick={() => action()}>назад</button>
       <form
         className={s.form}
         name="demand"
@@ -12,6 +13,7 @@ export default function form() {
         action="/success"
       >
         <input type="hidden" name="form-name" value="demand" />
+
         <h2>Заполните форму:</h2>
         <label>
           <input type="text" name="username" placeholder="Имя"></input>

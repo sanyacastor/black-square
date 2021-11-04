@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import { useState } from "react";
 
 import Section from "./components/section";
@@ -12,7 +11,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>ООО "Черный Квадрат" | BLACK SQUARE CONSULTING</title>
+        <title>ООО "Черный Квадрат" | </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -20,31 +19,30 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.logo}>
             <div className={styles.square}></div>
-            <h1 className={styles.title}>Black square consulting</h1>
+            <h1 className={styles.title}>Черный квадрат</h1>
             <p className={styles.lead}>
               Консультируем по вопросам владения, содержания, ремонта и
               реставрации объектов культурного наследия, памятников истории и
               культуры народов Российской Федерации.
             </p>
           </div>
-
-          {!formVisible ? (
-            <Section
-              header="Разработаем научно-проектную документацию по:"
-              list={[
-                "обеспечению сохранности объекта культурного наследия",
-                "перепланировке  помещения, расположенного в объекте культурного наследия",
-                "ремонту объекта культурного наследия",
-                "реставрации объекта культурного наследия",
-                "приспособлению объекта культурного наследия для современного использования",
-                "консервации объекта культурного наследия",
-                "воссозданию объекта культурного наследия методом строительства",
-              ]}
-              action={() => setFormVisible(true)}
-            ></Section>
-          ) : (
-            <Form />
-          )}
+          <Section
+            header="Разрабатываем научно-проектную документацию для объектов культурного наследия."
+            list={[
+              "Обеспечение сохранности",
+              "Ремонт и реставрация",
+              "Перепланировка  помещения",
+              "Приспособление для современного использования",
+              "Консервация",
+              "Воссоздание методом строительства",
+            ]}
+            action={() => setFormVisible(true)}
+          ></Section>
+          <div
+            className={formVisible ? styles.form__visible : styles.form__hidden}
+          >
+            <Form action={() => setFormVisible(false)} />
+          </div>
         </section>
       </main>
 

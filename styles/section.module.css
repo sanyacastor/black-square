@@ -1,6 +1,18 @@
 .section {
   padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
 }
+
 .title {
   margin-bottom: 48px;
+  width: 100%;
+}
+
+.list {
+  width: 100%;
+  margin-left: auto;
 }
