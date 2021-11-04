@@ -213,5 +213,11 @@
   .main {
     overflow: auto;
     height: auto;
+    overflow-x: hidden;
+  }
+
+  .form__visible {
+    position: fixed;
+    width: 100%;
   }
 }

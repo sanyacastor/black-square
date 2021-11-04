@@ -5,7 +5,7 @@
   color: white;
 
   text-transform: uppercase;
-  background: rgb(45, 39, 70);
+  background: rgb(14, 24, 32);
 }
 
 .form h2 {
@@ -19,14 +19,16 @@
   max-height: 100vh;
   overflow-x: hidden;
 }
-
-@media (max-width: 992px) {
-  .formContainer {
-    grid-column: 1/1;
-    height: auto;
-    overflow: hidden;
-    max-height: max-content;
-  }
+.formCloseButton {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 490 490' xml:space='preserve'%3E%3Cpath fill='white' d='M11.387 490 245 255.832 478.613 490l10.826-10.826-233.63-234.178 233.63-234.185L478.613 0 245 234.161 11.387 0 .561 10.811l233.63 234.185L.561 479.174z'/%3E%3C/svg%3E");
 }
 
 .form label {
@@ -50,7 +52,7 @@
 
 .form input {
   color: white;
-  background: rgb(45, 39, 70);
+  background: rgb(14, 24, 32);
   font-size: 1.5rem;
   width: 100%;
   border: none;
@@ -63,7 +65,7 @@
 
 .form select {
   font-size: 1.5rem;
-  background: rgb(45, 39, 70);
+  background: rgb(14, 24, 32);
   color: white;
   outline: 2px solid white;
   border-radius: 8px;
@@ -79,7 +81,7 @@
 .form textarea {
   color: white;
   padding: 8px;
-  background: rgb(45, 39, 70);
+  background: rgb(14, 24, 32);
   border-radius: 8px;
   border: 2px solid white;
   font-size: 1.5rem;
@@ -89,7 +91,7 @@
 }
 
 .form button {
-  background: rgb(45, 39, 70);
+  background: rgb(14, 24, 32);
   border-radius: 8px;
   border: 2px solid white;
   color: white;
@@ -98,7 +100,6 @@
 .form textarea::placeholder {
   color: white;
 }
-
 .form .spacer {
   display: inline-block;
   width: 18px;

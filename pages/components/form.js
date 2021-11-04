@@ -4,7 +4,7 @@ import s from "../../styles/form.module.css";
 export default function form({ action }) {
   return (
     <div className={s.formContainer}>
-      <button onClick={() => action()}>назад</button>
+      <span className={s.formCloseButton} onClick={() => action()}></span>
       <form
         className={s.form}
         name="demand"
