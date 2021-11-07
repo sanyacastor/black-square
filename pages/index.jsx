@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Head>
-        <title>ООО "Черный Квадрат" | </title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>ООО "Черный Квадрат" | Помогаем сохранить историю </title>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
@@ -27,19 +27,23 @@ export default function Home() {
             </p>
           </div>
           <Section
-            header="Разрабатываем научно-проектную документацию для объектов культурного наследия."
+            header='Разрабатываем научно-проектную документацию по объектам культурного наследия:'
             list={[
               "Обеспечение сохранности",
               "Ремонт и реставрация",
-              "Перепланировка  помещения",
+              "Перепланировка жилого помещения",
               "Приспособление для современного использования",
               "Консервация",
-              "Воссоздание методом строительства",
+              "Воссоздание методом строительства"
             ]}
             action={() => setFormVisible(true)}
           ></Section>
           <div
-            className={formVisible ? styles.form__visible : styles.form__hidden}
+            className={
+              formVisible
+                ? `${styles.form__visible + " " + styles.form_}`
+                : `${styles.form__hidden + " " + styles.form_}`
+            }
           >
             <Form action={() => setFormVisible(false)} />
           </div>

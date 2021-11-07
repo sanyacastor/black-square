@@ -16,6 +16,7 @@ body {
   html,
   body {
     overflow: auto;
+    font-size: 14px;
   }
 }
 
@@ -37,6 +38,12 @@ h1 {
   font-weight: normal;
   color: #fff;
   letter-spacing: 2px;
+}
+
+h2 {
+  font-family: "Lato", -apple-system, sans-serif;
+  font-weight: 300;
+  text-transform: none;
 }
 
 a,

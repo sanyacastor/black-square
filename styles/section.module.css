@@ -1,18 +1,57 @@
 .section {
-  padding: 0 16px;
+  padding: 0 64px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: center; */
   position: relative;
 }
 
 .title {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
   width: 100%;
 }
 
 .list {
   width: 100%;
   margin-left: auto;
+}
+
+.section .ctaButton {
+  position: absolute;
+  /* overflow: hidden; */
+  width: 120px;
+  padding: 20px;
+  height: 120px;
+  left: -60px;
+  top: 40%;
+  background: orange;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.section .ctaButton:hover {
+  transform: scale(1.4);
+  /* animation: spin 5s linear infinite; */
+}
+
+.section .ctaButton svg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 10px;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
