@@ -42,6 +42,7 @@
   height: 100%;
   position: relative;
 }
+
 .sectionItem {
   font-family: "Source Code Pro", -apple-system, monospace;
   color: #000;
@@ -53,17 +54,18 @@
   border-left: 1px solid #000;
   overflow: scroll;
 }
+
 .sectionItem + .sectionItem {
   border-top: 1px solid #000;
 }
+
 .square {
-  width: 3.5em;
-  height: 3.5em;
+  width: 4em;
+  height: 4em;
   display: block;
   background: #000;
   margin-bottom: 1.5em;
   padding: 1em;
-  border: 0.1em solid #fff;
   /* outline: 8px solid #000; */
 }
 
@@ -177,19 +179,29 @@
   .section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh max-content;
+    grid-template-rows: 100vh 80vh;
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
   .logo {
     grid-row: 1/1;
     grid-column: 1/1;
     padding: 0 1em;
+    /* justify-content: flex-start; */
+    /* padding-top: 5em; */
   }
+
   .footer {
     height: auto;
-    padding: 1em;
+    padding: 0 16px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    border-color: #fff;
+    font-size: .7em;
+    text-align: center;
   }
 
   .main {
@@ -201,5 +213,11 @@
   .form__visible {
     position: fixed;
     width: 100%;
+    z-index: 20;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 3rem;
   }
 }
