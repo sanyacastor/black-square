@@ -7,44 +7,44 @@ export default function form({ action }) {
       <span className={s.formCloseButton} onClick={() => action()}></span>
       <form
         className={s.form}
-        name="demand"
-        method="POST"
-        data-netlify="true"
-        action="/success"
+        name='demand'
+        method='POST'
+        data-netlify='true'
+        action='/success'
       >
-        <input type="hidden" name="form-name" value="demand" />
+        <input type='hidden' name='form-name' value='demand' />
 
         <h2>Заполните форму:</h2>
         <label>
-          <input type="text" name="username" placeholder="Имя"></input>
+          <input type='text' name='username' placeholder='Имя'></input>
         </label>
         <label>
           <input
-            type="text"
-            name="phone"
-            placeholder="Телефон для связи"
+            type='text'
+            name='phone'
+            placeholder='Телефон для связи'
           ></input>
         </label>
         <label>
-          <input type="text" name="email" placeholder="Почта"></input>
+          <input type='text' name='email' placeholder='Почта'></input>
         </label>
         <label>
-          <input type="text" name="address" placeholder="Адрес объекта"></input>
+          <input type='text' name='address' placeholder='Адрес объекта'></input>
         </label>
         <label>
           Статус объекта:
           <span className={s.spacer}></span>
-          <select name="status">
-            <option value="identified">выявленный</option>
-            <option value="regional">региональный</option>
-            <option value="federal">федеральный</option>
+          <select name='status'>
+            <option value='identified'>выявленный</option>
+            <option value='regional'>региональный</option>
+            <option value='federal'>федеральный</option>
           </select>
         </label>
         <label>
           <input
-            type="text"
-            name="registry_name"
-            placeholder="Наименование объекта"
+            type='text'
+            name='registry_name'
+            placeholder='Наименование объекта'
           ></input>
         </label>
         <small>
@@ -53,29 +53,31 @@ export default function form({ action }) {
         </small>
         <label>
           <input
-            type="text"
-            name="square"
-            placeholder="Проектируемая площадь"
+            type='text'
+            name='square'
+            placeholder='Проектируемая площадь'
           ></input>
         </label>
         <label>
           <input
-            type="text"
-            name="security_status"
-            placeholder="Информация о наличии предмета охраны"
+            type='text'
+            name='security_status'
+            placeholder='Информация о наличии предмета охраны'
           ></input>
         </label>
         <small>
           (акт технического состояния, предписания органа охраны памятников)
         </small>
         <textarea
-          type="text"
-          rows="4"
-          name="description"
-          placeholder="Описание планируемых работ"
+          type='text'
+          rows='4'
+          name='description'
+          placeholder='Описание планируемых работ'
         ></textarea>
 
-        <button type="submit">Отправить</button>
+        <button type='submit'>Отправить</button>
+
+        <div className={s.formBottom}>made by sanya3000</div>
       </form>
     </div>
   );

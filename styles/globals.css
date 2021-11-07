@@ -80,6 +80,10 @@ li:before {
   left: -20px;
   top: 8px;
 }
+textarea {
+  font-family: "Lato", -apple-system, sans-serif;
+  font-weight: normal;
+}
 
 * {
   box-sizing: border-box;

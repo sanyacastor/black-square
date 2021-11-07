@@ -25,11 +25,25 @@
   position: absolute;
   width: 30px;
   height: 30px;
+  background: rgb(14, 24, 32);
+  border-radius: 50%;
   top: 20px;
   right: 40px;
   cursor: pointer;
   background-size: cover;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 490 490' xml:space='preserve'%3E%3Cpath fill='white' d='M11.387 490 245 255.832 478.613 490l10.826-10.826-233.63-234.178 233.63-234.185L478.613 0 245 234.161 11.387 0 .561 10.811l233.63 234.185L.561 479.174z'/%3E%3C/svg%3E");
+}
+
+.formBottom {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: rgb(14, 24, 32);
+  color: rgb(14, 24, 32);
+  font-size: 0.5em;
+  text-align: right;
+  text-transform: none;
+  line-height: 1;
 }
 
 .form label {
@@ -92,6 +106,8 @@
   width: 100%;
   resize: none;
   margin-top: 8px;
+  display: block;
+  min-height: 5em;
 }
 
 .form button {

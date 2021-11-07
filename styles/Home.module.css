@@ -88,15 +88,12 @@
   height: calc(100vh - 60px);
   width: 50%;
   overflow: hidden;
+  background: rgb(14, 24, 32);
+  transform: translateX(200%);
 }
 
 .form__visible {
   transform: translateX(0);
-  background: rgb(45, 39, 70);
-}
-
-.form__hidden {
-  transform: translateX(200%);
 }
 
 .title a {
