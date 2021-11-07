@@ -6,7 +6,7 @@
   font-weight: 300;
   text-transform: uppercase;
   background: rgb(14, 24, 32);
-  padding-bottom: 60px;
+  height: Calc(100vh - 60px);
 }
 
 .form h2 {
